@@ -136,3 +136,40 @@ class showObj {
 const person = new showObj("Geetesh", 19, "Indore");
 console.log(person);
 person.showName();
+
+/*                                     ✨✨**-:LLD:-**✨✨                                        */
+
+class Vehicle {
+	constructor(type, regNumber) {
+		this._type = type;
+		this._regNumber = regNumber;
+	}
+
+	get type() {
+		return this._type;
+	}
+
+	get regNumber() {
+		return this._regNumber;
+	}
+
+	set type(value) {
+		this._type = value;
+	}
+
+	set regNumber(value) {
+		this._regNumber = value;
+	}
+}
+
+const v1 = new Vehicle("Car", "mp05");
+
+// but there is one catch here
+// if we try to change the value of any key
+
+v1.regNumber = "MH44";
+console.log(v1);
+
+// in the above case we can see it is not a good design aproach that we can change the value directly
+// so to overcome these problems we have something that is called getter and setter in class
+// now we have made changes to class ☝️☝️
